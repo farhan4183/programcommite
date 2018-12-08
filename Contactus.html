@@ -1,0 +1,136 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<title>ISCN Program Commite Website</title>
+<link href="stylesheet.css" rel="stylesheet" type="text/css">
+
+</head>
+<script>
+               
+                
+                function validateFName(){
+                    var x=document.forms["myForm"]["fname"].value;
+                    var re = new RegExp(/^\s*[A-Z][a-z]{2,10}\s*$/);
+                    var m = re.exec(x);
+                    if (m==null){
+                        alert("First name must be filled out properly!!!!");
+                        return false;
+                    }else{
+                        return true;
+                    }
+                }
+                function validateLName(){
+                    var x=document.forms["myForm"]["lname"].value;
+                    var re = new RegExp(/^\s*[A-Z][a-z]{2,10}\s*$/);
+                    var m = re.exec(x);
+                    if (m==null){
+                        alert("Last name must be filled out properly!!!!");
+                        return false;
+                    }else{
+                        return true;
+                    }
+                }
+				function validateEmail(){
+                    var x=document.forms["myForm"]["email"].value;
+                    var re = new RegExp(/^\s*\w+@\w+\.\w+\s*$/);
+                    var m = re.exec(x);
+                    if (m==null){
+                        alert("Email must be filled out properly!!!!");
+                        return false;
+                    }else{
+                        return true;
+                    }
+                }
+				function validatePhone(){
+                    var x=document.forms["myForm"]["phone"].value;
+                    var re = new RegExp(/^\s*[0-9]\d*$/);
+                    var m = re.exec(x);
+                    if (m==null){
+                        alert("Phone number must be filled out properly!!!!");
+                        return false;
+                    }else{
+                        return true;
+                    }
+                }
+				
+				function validateDescription(){
+                    var x=document.forms["myForm"]["description"].value;
+                    var re = new RegExp(/\w/);
+                    var m = re.exec(x);
+                    if (m==null){
+                        alert("Please have some thing in Description");
+                        return false;
+                    }else{
+                        return true;
+                    }
+                }
+				
+				
+                function validateForm(){
+                    if(!validateFName())return false;
+                    if(!validateLName())return false;
+					if(!validateEmail())return false;
+					if(!validatePhone())return false;
+					if(!validateDescription())return false;
+					
+                    return true;
+                }
+            </script>
+<body>
+<div id="logo"><img src="picture1.JPG" width="100" height="100"></div>
+
+<nav><a href="http://www.coronamuslims.com"> ISCN Website</a>- <a href="index.html"> Home</a> - <a href="events.html">Schedule</a> - <a href="Contactus.html">ContactUs</a>- <a href="sponsor2.html">Our Sponsors</a></nav>
+
+
+<div id="Mainpic"></div>
+
+<header>
+  <h1>ISCN Program Commite Website</h1>
+</header>
+<section>
+  <h2>Contact Us:</h2>
+  <form name="myForm" method="get" action="displaydata1.html" onsubmit="return validateForm()">
+
+  <table width="800" border="0">
+  <tr>
+    <td>      <label for="Fname">First name</label> 
+      <input type="text" name="fname" id="Fname" tabindex="1">          
+      <label for="Lname">Last name</label>
+      <input type="text" name="lname" id="Lname" tabindex="2"></td>
+  </tr>
+  <tr>
+    <td><label for="Email" required>Email address</label>
+      <input type="text" name="email" id="Email" tabindex="3"></td>
+  </tr>
+  <tr>
+    <td><label for="Phone">Phone:</label>
+      <input name="phone" type="text" id="Phone" tabindex="4" maxlength="10" ></td>
+  </tr>
+  <tr>
+    <td>Description:
+      <textarea name="description" cols="80" rows="7" id="Description" tabindex="5"></textarea></td>
+  </tr>
+  <tr>
+    <td>
+    <input type="submit" name="Cancel" id="Cancel" value="Cancel" tabindex="6">
+      <input type="submit" name="Cancel" id="Cancel" value="Submit" tabindex="6"></td>
+  </tr>
+</table>
+</form>
+</section>
+<div id="leftNav">
+    <p><a href="aboutus.html">About Us</a></p>
+    <p><a href="commiteemember.html">Commite Members</a></p>
+    <p><a href="events.html">Up Coming Events</a></p>
+    
+  </div>>
+<div id="footer">
+    <p>Copyright 2018 ISCN Program Commite. All rights reserved.</p>
+</div>
+  <p>
+  
+
+</body>
+</html>
