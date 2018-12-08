@@ -102,6 +102,7 @@ header {
 section {
 	
 	background: rgba(0,153,0,0.5);
+	position:absolute;
 	left: 18%;
 	top: 300px;
 	width: 60%;
